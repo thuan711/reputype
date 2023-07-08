@@ -12,7 +12,7 @@ $dom = new DOMDocument();
 @$dom->loadHTML($response);
 $xpath = new DOMXPath($dom);
 // Lấy các phần tử trong trang web dựa trên các selector CSS
-$titleElements = $dom->getElementsByTagName('h1');
+$titleElements = $dom->getElementsByTagName('h3');
 $descriptionElements = $dom->getElementsByTagName('p');
 $imageElements = $dom->getElementsByTagName('img');
 
@@ -21,7 +21,7 @@ $data = [];
 $count = 0;
 foreach ($titleElements as $key => $element) {
     
-    if ($element->parentNode->getAttribute('class')!='article-content') continue;
+    if ($element->parentNode->getAttribute('class')!='article-care') continue;
    
     $title = $element->textContent;
     $description = $element-> nextSibling->textContent;

@@ -12,7 +12,7 @@ $dom = new DOMDocument();
 @$dom->loadHTML($response);
 $xpath = new DOMXPath($dom);
 // Lấy các phần tử trong trang web dựa trên các selector CSS
-$titleElements = $dom->getElementsByTagName('h1');
+$titleElements = $dom->getElementsByTagName('h3');
 $descriptionElements = $dom->getElementsByTagName('p');
 $imageElements = $dom->getElementsByTagName('img');
 
